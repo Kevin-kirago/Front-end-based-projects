@@ -1,0 +1,48 @@
+:root {
+	--color-red: #ff7a7a;
+	--color-green: #38cb8b;
+	--color-blue: #5f54a4;
+	--color-white: #ffffff;
+	--dark-blue: #3d3b48;
+	--grayish-blue: #b8b5d3;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+.component {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-image: url(../images/bg-intro-desktop.png);
+	background-color: var(--color-red);
+	background-position: center;
+	background-size: cover;
+}
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+	display: flex;
+	height: 100%;
+}
+
+.container .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: var(--color-white);
+	width: 50%;
+	height: 100%;
+}
