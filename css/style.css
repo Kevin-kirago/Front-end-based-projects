@@ -29,16 +29,127 @@ body {
 	min-height: 100vh;
 	background: var(--color-red) url(../images/bg-intro-desktop.png) no-repeat center center;
 }
-
 .content {
 	display: flex;
-	padding: 0 3rem;
+	padding: 0 3.5rem;
 	flex-direction: column;
 	justify-content: center;
 	color: var(--color-white);
 }
-
 .content h1 {
 	font-size: 4.5rem;
 	margin-bottom: 2rem;
+}
+.banner {
+	background-color: var(--color-blue);
+	padding: 2rem;
+	box-shadow: 0rem 1rem 0rem 0rem rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	margin-bottom: 2.5rem;
+	text-align: center;
+}
+.form {
+	width: 100%;
+	background-color: var(--color-white);
+	border-radius: 10px;
+	padding: 5rem 4rem;
+}
+
+.form__group {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: 3rem;
+}
+
+.form__input {
+	width: 100%;
+	padding: 1rem 2rem;
+	border: 1px solid #d9d4d4;
+	border-radius: 5px;
+	color: var(--dark-blue);
+	font-weight: 600;
+	height: 5rem;
+}
+
+.form__input:focus {
+	outline: none;
+}
+
+.form__input:focus:invalid {
+	border-color: var(--color-red);
+}
+
+.err-msg {
+	position: absolute;
+	font-size: 1rem;
+	color: var(--color-red);
+	transform: translateY(3.5rem);
+	visibility: hidden;
+	opacity: 0;
+}
+
+.err-icon {
+	position: absolute;
+	height: 3rem;
+	width: 5rem;
+	background: url(../images/icon-error.svg) no-repeat center center;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.form__btn {
+	width: 100%;
+	padding: 1.5rem;
+	border-radius: 5px;
+	background-color: var(--color-green);
+	color: var(--color-white);
+	border: none;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+}
+
+.form__btn:focus {
+	outline: none;
+}
+
+.form p {
+	display: block;
+	font-size: 1.2rem;
+	color: #b6afaf;
+	text-align: center;
+}
+
+.form p span {
+	color: var(--color-red);
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 50%;
+	}
+
+	.container {
+		grid-template-columns: 1fr;
+		padding: 8rem 0;
+	}
+
+	.content h1 {
+		font-size: 3.5rem;
+		text-align: center;
+	}
+
+	.paragraph {
+		text-align: center;
+	}
+
+	.banner {
+		margin-top: 5rem;
+	}
+
+	.form {
+		padding: 3rem;
+	}
 }

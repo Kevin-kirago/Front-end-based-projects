@@ -24,10 +24,33 @@
 				</p>
 			</div>
 			<div class="content">
-				<div class="content__banner">
+				<div class="banner">
 					<p class="paragraph"><strong>Try it free for 7 days </strong>then $20/mo, thereafter</p>
 				</div>
-				<div class="content__form"></div>
+				<form action="#" class="form">
+					<div class="form__group">
+						<input type="text" name="First-Name" class="form__input" placeholder="First Name" />
+						<span class="err-icon">&nbsp;</span>
+						<span class="err-msg">First name cannot be empty</span>
+					</div>
+					<div class="form__group">
+						<input type="text" name="Last-Name" class="form__input" placeholder="Last Name" />
+						<span class="err-icon">&nbsp;</span>
+						<span class="err-msg">Last name cannot be empty</span>
+					</div>
+					<div class="form__group">
+						<input type="email" name="Email" class="form__input" placeholder="Email Address" />
+						<span class="err-icon">&nbsp;</span>
+						<span class="err-msg">Looks like this is not an email</span>
+					</div>
+					<div class="form__group">
+						<input type="password" name="Password" class="form__input" placeholder="Password" />
+						<span class="err-icon">&nbsp;</span>
+						<span class="err-msg">Password cannot be empty</span>
+					</div>
+					<button type="submit" class="form__btn">Claim your free trial</button>
+					<p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+				</form>
 			</div>
 		</div>
 
