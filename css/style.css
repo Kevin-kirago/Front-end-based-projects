@@ -43,7 +43,7 @@ body {
 .banner {
 	background-color: var(--color-blue);
 	padding: 2rem;
-	box-shadow: 0rem 1rem 0rem 0rem rgba(0, 0, 0, 0.1);
+	box-shadow: 0rem 1rem 0rem 0rem rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 	margin-bottom: 2.5rem;
 	text-align: center;
@@ -74,11 +74,26 @@ body {
 }
 
 .form__input:focus {
+	border-color: var(--color-blue);
 	outline: none;
 }
 
-.form__input:focus:invalid {
+.show-err {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.show-border {
 	border-color: var(--color-red);
+}
+
+.mail::-webkit-input-placeholder {
+	color: var(--color-red);
+	border-width: 4px !important;
+}
+
+.form__err::-webkit-input-placeholder {
+	display: none;
 }
 
 .err-msg {
@@ -108,6 +123,7 @@ body {
 	border: none;
 	margin-bottom: 1.5rem;
 	text-transform: uppercase;
+	box-shadow: 0rem 0.7rem 0rem 0rem rgba(0, 0, 0, 0.3);
 }
 
 .form__btn:focus {
