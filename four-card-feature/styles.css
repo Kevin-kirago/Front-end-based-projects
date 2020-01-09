@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Poppins", sans-serif;
+	background-color: #f7f7f7;
+}
+
+@media only screen and (max-width: 50rem) {
+	html {
+		font-size: 50%;
+	}
+}
+
+.container {
+	width: 100%;
+	margin: 3rem 0 5rem 0;
+}
+
+.row {
+	max-width: 130rem;
+	margin: 5rem auto;
+}
+
+.description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	color: #4c4e61;
+}
+
+.description .light {
+	font-size: 3.8rem;
+	font-weight: 200;
+}
+
+.description .bold {
+	font-size: 3.7rem;
+}
+
+.description p {
+	color: #a3a5ae;
+	width: 500px;
+	margin: 1.2rem;
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.card__container {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		"supervisor team calculator"
+		"supervisor . calculator"
+		"supervisor karma calculator";
+	grid-gap: 3rem;
+	place-items: center;
+}
+
+.card__container > * {
+	width: 100%;
+	height: 250px;
+	padding: 4rem 3rem;
+	display: grid;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 50rem) {
+	.row {
+		margin: 5rem 2rem;
+	}
+
+	.description .light {
+		font-size: 3.2rem;
+	}
+
+	.description .bold {
+		font-size: 3rem;
+	}
+
+	.description p {
+		width: 300px;
+	}
+
+	.card__container > * {
+		height: 200px;
+		padding: 3rem 2rem;
+	}
+
+	.card__container {
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"supervisor"
+			"team"
+			"karma"
+			"calculator";
+	}
+
+	#karma {
+		grid-row: karma / karma !important;
+	}
+}
+
+#supervisor {
+	grid-row: supervisor / supervisor;
+	grid-column: supervisor / supervisor;
+	border-top: 5px solid #45d3d3;
+}
+
+#team {
+	grid-row: team / team;
+	grid-column: team / team;
+	border-top: 5px solid #ea5353;
+}
+#karma {
+	grid-row: 2 / 3;
+	grid-column: karma / karma;
+	border-top: 5px solid #fcaf4a;
+}
+#calculator {
+	grid-row: calculator / calculator;
+	grid-column: calculator / calculator;
+	border-top: 5px solid #549ef2;
+}
+
+.card__title {
+	font-size: 2.5rem;
+	color: #4c4e61;
+}
+
+.card__content {
+	color: #a3a5ae;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.card__img {
+	justify-self: end;
+}
