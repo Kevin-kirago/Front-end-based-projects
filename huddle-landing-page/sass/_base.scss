@@ -4,11 +4,19 @@ $color-pale-cyan: #ebfbff;
 $color-dark-cyan: #00252e;
 $color-grayish-blue: #808d99;
 
-@mixin clearfix {
-	&::after {
-		content: "";
-		display: table;
-		clear: both;
+/* $breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 600px) {
+			//600px / 16px
+			@content;
+		}
 	}
 }
 
@@ -23,8 +31,7 @@ $color-grayish-blue: #808d99;
 html {
 	font-size: 62.5%;
 
-	@media only screen and (max-width: 37.5em) {
-		// 600px / 16px = 37.5em
+	@include respond(phone) {
 		font-size: 50%;
 	}
 }
