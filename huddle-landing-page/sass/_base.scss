@@ -1,0 +1,35 @@
+// sass variables
+$color-pink: #ff52bf;
+$color-pale-cyan: #ebfbff;
+$color-dark-cyan: #00252e;
+$color-grayish-blue: #808d99;
+
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+
+	@media only screen and (max-width: 37.5em) {
+		// 600px / 16px = 37.5em
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+}
