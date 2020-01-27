@@ -1,0 +1,137 @@
+:root {
+	--font-heading: "Barlow Condensed", sans-serif;
+	--font-display: "Barlow", sans-serif;
+
+	--red: #ff5c5c;
+	--dark-blue: #242942;
+	--dark-grayish-blue: #5b5f71;
+	--grayish-blue: #a0a1ac;
+	--light-grayish-blue: #eef3f6;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--font-display);
+	line-height: 1;
+}
+
+body::before {
+	position: absolute;
+	right: 0;
+	display: block;
+	content: "";
+	background-color: var(--light-grayish-blue);
+	border-bottom-left-radius: 5rem;
+	height: 50vh;
+	width: 50%;
+}
+
+.container {
+	position: relative;
+	min-height: 75rem;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 15rem 60rem;
+	grid-row-gap: 5rem;
+}
+
+.nav {
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+	padding: 0 10rem;
+
+	display: flex;
+	justify-content: space-between;
+	font-family: var(--font-heading);
+}
+
+.nav__logo {
+	width: 10rem;
+	height: 100%;
+
+	display: grid;
+	align-content: center;
+}
+
+.nav__icon {
+	display: none;
+}
+
+.wrapper {
+	display: block;
+	width: 50%;
+	list-style: none;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav__item:nth-child(4)::before {
+	display: block;
+	content: ".";
+	color: var(--grayish-blue);
+}
+
+.nav__item:nth-child(5) a {
+	color: var(--grayish-blue);
+}
+
+.nav__item {
+	font-size: 1.4rem;
+	font-weight: 700;
+	padding-left: 2.5rem;
+}
+
+.nav__link {
+	color: var(--dark-blue);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.thumbnail {
+	background-image: url(../images/illustration-devices.svg);
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 55%;
+	}
+
+	.container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 10rem min-content min-content;
+	}
+
+	.nav {
+		padding: 0 2rem;
+		align-items: center;
+	}
+
+	.wrapper {
+		display: none;
+	}
+
+	.nav__icon {
+		display: block;
+		height: 1px;
+		width: 3rem;
+		color: var(--dark-blue);
+		border: none;
+		border-radius: 0;
+	}
+}
