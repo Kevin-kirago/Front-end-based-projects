@@ -82,7 +82,7 @@ body::before {
 
 .nav__item:nth-child(4)::before {
 	display: block;
-	content: ".";
+	content: "\2022";
 	color: var(--grayish-blue);
 }
 
@@ -91,9 +91,10 @@ body::before {
 }
 
 .nav__item {
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	font-weight: 700;
 	padding-left: 2.5rem;
+	letter-spacing: 1px;
 }
 
 .nav__link {
@@ -107,6 +108,65 @@ body::before {
 	background-repeat: no-repeat;
 }
 
+.content {
+	padding-left: 10rem;
+	padding-right: 7rem;
+	padding-top: 4rem;
+}
+.heading__primary {
+	font-family: var(--font-heading);
+	color: var(--dark-blue);
+	font-size: 7rem;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+	margin-top: 1rem;
+	letter-spacing: 1px;
+}
+.paragraph {
+	font-family: var(--font-display);
+	color: var(--dark-grayish-blue);
+	font-size: 1.8rem;
+	line-height: 1.4;
+	margin-bottom: 4rem;
+}
+
+.cta {
+	display: inline-block;
+	font-family: var(--font-heading);
+	font-size: 1.6rem;
+	font-weight: 700;
+	background-color: var(--red);
+	color: var(--light-grayish-blue);
+
+	padding: 2rem 3rem;
+	border-radius: 4px;
+	text-decoration: none;
+	letter-spacing: 1px;
+
+	text-transform: uppercase;
+	margin-right: 2rem;
+}
+
+.cta-text {
+	color: var(--grayish-blue);
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.cta-text-bold {
+	padding: 0.5rem 1rem;
+	background-color: var(--dark-blue);
+	color: var(--light-grayish-blue);
+	text-transform: uppercase;
+	font-family: var(--font-heading);
+	letter-spacing: 1px;
+	font-size: 1.4rem;
+	font-weight: 700;
+	border-radius: 1rem;
+	margin-right: 1rem;
+}
+
 @media only screen and (max-width: 600px) {
 	html {
 		font-size: 55%;
@@ -114,7 +174,8 @@ body::before {
 
 	.container {
 		grid-template-columns: 1fr;
-		grid-template-rows: 10rem min-content min-content;
+		grid-template-rows: 10rem 65vw min-content;
+		grid-row-gap: 4rem;
 	}
 
 	.nav {
@@ -130,8 +191,51 @@ body::before {
 		display: block;
 		height: 1px;
 		width: 3rem;
-		color: var(--dark-blue);
+
+		background-color: var(--dark-blue);
 		border: none;
 		border-radius: 0;
+	}
+
+	.nav__icon::before,
+	.nav__icon::after {
+		display: block;
+		content: "";
+		height: 1.5px;
+		width: 3rem;
+
+		background-color: var(--dark-blue);
+	}
+
+	.nav__icon::before {
+		transform: translateY(0.9rem);
+	}
+
+	.nav__icon::after {
+		transform: translateY(-1.1rem);
+	}
+
+	.thumbnail {
+		grid-row: 2 / 3;
+		background-size: cover;
+	}
+
+	.content {
+		margin-top: 2rem;
+		padding: 2rem;
+	}
+
+	.heading__primary {
+		font-size: 4rem;
+		margin-bottom: 2rem;
+		margin-top: 2.5rem;
+	}
+
+	.paragraph {
+		margin-bottom: 3rem;
+	}
+
+	.cta-text {
+		letter-spacing: 0.2px;
 	}
 }
