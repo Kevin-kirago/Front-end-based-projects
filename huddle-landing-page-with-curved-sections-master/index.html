@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Huddle landing page with curved sections</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:700&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Try it free
-
-  Build The Community Your Fans Will Love
-
-  Huddle re-imagines the way we build communities. You have a voice, but so does 
-  your audience. Create connections with your users as you engage in genuine discussion. 
-
-  Get Started For Free
-
-  1.4k+
-  Communities Formed
-
-  2.7m+
-  Messages Sent
-
-  Grow Together
-  Generate meaningful discussions with your audience and build a strong, loyal community. 
-  Think of the insightful conversations you miss out on with a feedback form. 
-
-  Flowing Conversations
-  You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
-  just-in-time loading for a more natural flow.
-
-  Your Users
-  It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
-  once signed in to your app, your users can start chatting immediately.
-
-  Ready To Build Your Community?
-  Get Started For Free
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-  vestibulum a, ultrices quis sem.
-  
-  Phone: +1-543-123-4567
-  example@huddle.com
-
-  Newsletter
-  To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
-  send you spam or pass on your email address
-
-  Subscribe
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+		<title>Frontend Mentor | Huddle landing page with curved sections</title>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navigation">
+				<div class="navigation__logo">
+					<img src="images/logo.svg" alt="logo -iamge" class="navigation__logo--img" />
+				</div>
+				<a href="/" class="btn btn-outline">Try It Free</a>
+			</nav>
+			<header class="header">
+				<div class="header__content">
+					<h2 class="heading-secondary">Build The Community Your Fans Will Love</h2>
+					<p class="paragraph">
+						Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
+					</p>
+					<a href="/" class="btn btn-pink">Get Started For Free</a>
+				</div>
+				<div class="header__thumbnail">
+					<img src="images/screen-mockups.svg" alt="screen mockup image" class="header__thumbnail--img" />
+				</div>
+				<div class="header__feature">
+					<div class="header__feature-icons header__feature-item-1">
+						<img src="images/icon-communities.svg" alt="icon communities" />
+					</div>
+					<div class="header__feature-icons header__feature-item-2">
+						<img src="images/icon-messages.svg" alt="icon message" />
+					</div>
+					<div class="header__feature-detail header__feature-item-3">
+						<span>1.4k+</span>
+					</div>
+					<div class="header__feature-detail header__feature-item-4">
+						<span>2.7m+</span>
+					</div>
+					<span class="header__feature-text header__feature-item-1">Community Formed</span>
+					<span class="header__feature-text header__feature-item-2">Messages Sent</span>
+				</div>
+			</header>
+		</div>
+	</body>
 </html>
