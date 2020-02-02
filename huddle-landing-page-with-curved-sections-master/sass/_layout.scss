@@ -23,7 +23,7 @@
 
 	&__thumbnail {
 		width: 100%;
-		margin: 3rem 0;
+		margin: 6rem 0;
 
 		display: flex;
 		justify-content: center;
@@ -37,8 +37,7 @@
 	&__feature {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
-		margin-top: 10rem;
-		margin-bottom: 10rem;
+		margin: 6rem 0;
 
 		&-detail span {
 			font-family: "Open Sans", sans-serif;
@@ -68,4 +67,57 @@
 			grid-column: 5 / span 2;
 		}
 	}
+}
+
+.section-main {
+	position: relative;
+	padding: 6rem 0;
+}
+
+.story {
+	position: relative;
+	width: 100%;
+	padding: 10rem 8rem;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		p {
+			color: #000;
+			font-size: 1.6rem;
+			width: 80%;
+		}
+
+		&-pl {
+			padding-left: 8rem;
+		}
+	}
+
+	&__thumbnail {
+		width: 100%;
+
+		&-img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.curved-colored {
+	background: $color-pale-cyan;
+}
+
+.cta {
+	position: relative;
+	padding: 10rem 0;
+
+	display: grid;
+	align-content: center;
+	justify-items: center;
 }
