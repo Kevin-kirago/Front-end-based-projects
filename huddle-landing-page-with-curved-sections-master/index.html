@@ -7,6 +7,7 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:700&display=swap" rel="stylesheet" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 
 		<title>Frontend Mentor | Huddle landing page with curved sections</title>
@@ -51,7 +52,7 @@
 		</div>
 
 		<main class="section-main">
-			<div class="story curved-colored">
+			<div class="story curved__colored curved__colored--2">
 				<div class="story__content">
 					<h2 class="heading-tertiary">Grow Together</h2>
 					<p>
@@ -73,7 +74,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="story curved-colored">
+			<div class="story curved__colored curved__colored--2">
 				<div class="story__content">
 					<h2 class="heading-tertiary">Your Users</h2>
 					<p>
@@ -89,5 +90,35 @@
 				<a href="/" class="btn btn-pink">Get Started For Free</a>
 			</div>
 		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__logo">
+					<img src="images/logo.svg" alt="logo" class="footer__logo--img" />
+				</div>
+				<span class="footer__heading">Newsletter</span>
+				<p class="footer__paragraph">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sapiente sequi ad aut mollitia repudiandae dolorum, sed soluta eligendi ipsum necessitatibus eos ?
+				</p>
+				<p class="footer__paragraph">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sapiente sequi ad aut mollitia repudiandae dolorum, sed soluta eligendi ipsum necessitatibus eos ?
+				</p>
+				<div class="footer__details">
+					<img src="images/icon-phone.svg" alt="icon-phone" class="footer__details--icon" />
+					<p class="footer__details--paragraph">Phone: +123-456-789</p>
+					<img src="images/icon-email.svg" alt="icon-email" class="footer__details--icon" />
+					<p class="footer__details--paragraph">example@huddle.com</p>
+				</div>
+				<form action="/" class="form">
+					<input type="text" name="subscribe" class="form__input" />
+					<input type="button" value="Subscribe" class="form__btn" />
+				</form>
+				<div class="footer__link">
+					<a href="/" class="footer__link--item"> <i class="ion-social-facebook"></i></a>
+					<a href="/" class="footer__link--item"> <i class="ion-social-instagram"></i></a>
+					<a href="/" class="footer__link--item"> <i class="ion-social-twitter"></i></a>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
