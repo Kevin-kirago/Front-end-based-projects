@@ -4,6 +4,15 @@ $color-pale-cyan: #f5faff;
 
 $font-heading: "Poppins", sans-serif;
 
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) {
+			//600px / 16px
+			@content;
+		}
+	}
+}
+
 *,
 *::before,
 *::after {
@@ -15,6 +24,10 @@ $font-heading: "Poppins", sans-serif;
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
+
+	@include respond(phone) {
+		font-size: 50%;
+	}
 }
 
 body {
@@ -27,6 +40,10 @@ body {
 	position: relative;
 	width: 100%;
 	padding: 0 8rem;
+
+	@include respond(phone) {
+		padding: 0 2rem;
+	}
 }
 
 // btn
@@ -44,6 +61,10 @@ body {
 		background-color: #fff;
 		padding: 1rem 4rem;
 		color: $color-pink;
+
+		@include respond(phone) {
+			padding: 1rem 3rem;
+		}
 	}
 
 	&-pink {

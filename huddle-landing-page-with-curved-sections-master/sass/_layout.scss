@@ -177,6 +177,10 @@
 
 	background: $color-dark-cyan;
 
+	@include respond(phone) {
+		padding: 20rem 2rem;
+	}
+
 	&::before {
 		display: block;
 		content: "";
@@ -192,10 +196,6 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-}
-
-.footer {
-	position: relative;
 
 	&__container {
 		padding: 5rem 0;
@@ -204,6 +204,10 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 3rem;
 		grid-column-gap: 5rem;
+
+		@include respond(phone) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__logo {
@@ -263,6 +267,13 @@
 	grid-template-columns: 2fr 1fr;
 	grid-column-gap: 2rem;
 	align-content: center;
+
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+		grid-row-gap: 2rem;
+
+		justify-items: end;
+	}
 
 	& > * {
 		border: none;
