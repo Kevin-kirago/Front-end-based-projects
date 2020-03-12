@@ -7,10 +7,10 @@
 		"watch:sass": "node-sass sass/main.scss css/style.css -w",
 		"start": "npm-run-all watch:sass",
 		"compile:sass": "node-sass sass/main.scss css/style.comp.css",
-		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+		"prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
 		"concat:css": "concat -o css/style.concat.css css/ionicons.css css/style.comp.css",
 		"compress:css": "node-sass css/style.concat.css css/style.css --output-style compressed",
-		"build:css": "npm-run-all compile:sass concat:css compress:css"
+		"build:css": "npm-run-all compile:sass prefix:css concat:css compress:css"
 	},
 	"author": "Kevin kiragu",
 	"license": "ISC",

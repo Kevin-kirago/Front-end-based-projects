@@ -150,7 +150,7 @@
 .story {
 	position: relative;
 	width: 100%;
-	padding: 15rem 8rem;
+	padding: 18rem 8rem;
 
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -165,7 +165,6 @@
 	&__content {
 		display: grid;
 		align-content: center;
-		padding: 5rem 0;
 
 		@include respond(phone) {
 			grid-row: 2 / 3;
@@ -284,7 +283,7 @@
 
 .cta {
 	position: relative;
-	padding: 10rem 0;
+	padding: 15rem 0;
 
 	display: grid;
 	align-content: center;
@@ -361,8 +360,8 @@
 
 	&__paragraph {
 		color: $color-pale-cyan;
-		font-size: 1.6rem;
-		width: 80%;
+		font-size: 1.5rem;
+		width: 75%;
 
 		@include respond(phone) {
 			width: 100%;
