@@ -1,0 +1,44 @@
+$color-gray: #bfbfbf;
+$color-greyish-blue: #f6f6fe;
+$color-moderate-cyan: #3c9f8f;
+$color-bright-blue: #3065f8;
+$color-desaturated-blue: #585989;
+$color-dark-blue: #070439;
+
+$font-heading: "Raleway", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) {
+			//600px / 16px
+			@content;
+		}
+	}
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+	@include respond(phone) {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: $font-body;
+	line-height: 1.7;
+}
+
+// ****************************
+// typography
+// ****************************

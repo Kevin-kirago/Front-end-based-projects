@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7; }
+
+.navigation {
+  position: relative;
+  height: 10rem;
+  width: 100%;
+  padding: 0 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media (max-width: 37.5em) {
+    .navigation {
+      padding: 0 2rem; } }
+  .navigation__logo {
+    height: 100%;
+    width: 15rem;
+    display: grid;
+    align-content: center; }
+    @media (max-width: 37.5em) {
+      .navigation__logo {
+        width: 10rem; } }
+    .navigation__logo--img {
+      width: 80%; }
+  .navigation__nav {
+    list-style: none;
+    display: flex; }
+  .navigation__item {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.3rem; }
+    .navigation__item:not(:last-child) {
+      margin-right: 3rem; }
+      @media (max-width: 37.5em) {
+        .navigation__item:not(:last-child) {
+          margin-right: 1.5rem; } }
+    .navigation__item--link:link, .navigation__item--link:visited {
+      color: #070439;
+      text-decoration: none; }

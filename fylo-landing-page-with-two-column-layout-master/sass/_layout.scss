@@ -1,0 +1,57 @@
+// Navigation
+.navigation {
+	position: relative;
+	height: 10rem;
+	width: 100%;
+	padding: 0 7rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include respond(phone) {
+		padding: 0 2rem;
+	}
+
+	&__logo {
+		height: 100%;
+		width: 15rem;
+
+		display: grid;
+		align-content: center;
+
+		@include respond(phone) {
+			width: 10rem;
+		}
+
+		&--img {
+			width: 80%;
+		}
+	}
+
+	&__nav {
+		list-style: none;
+		display: flex;
+	}
+
+	&__item {
+		font-family: $font-heading;
+		font-size: 1.3rem;
+
+		&:not(:last-child) {
+			margin-right: 3rem;
+
+			@include respond(phone) {
+				margin-right: 1.5rem;
+			}
+		}
+
+		&--link {
+			&:link,
+			&:visited {
+				color: $color-dark-blue;
+				text-decoration: none;
+			}
+		}
+	}
+}
