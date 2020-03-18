@@ -36,9 +36,22 @@ html {
 
 body {
 	font-family: $font-body;
-	line-height: 1.7;
+	line-height: 1.5;
 }
 
 // ****************************
 // typography
 // ****************************
+
+.heading {
+	&__primary {
+		font-family: $font-heading;
+		font-size: 3.5rem;
+		color: $color-dark-blue;
+	}
+}
+
+.paragraph {
+	font-size: 1.5rem;
+	color: $color-dark-blue;
+}

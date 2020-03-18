@@ -1,6 +1,7 @@
 // Navigation
 .navigation {
-	position: relative;
+	position: absolute;
+	top: 0;
 	height: 10rem;
 	width: 100%;
 	padding: 0 7rem;
@@ -53,5 +54,59 @@
 				text-decoration: none;
 			}
 		}
+	}
+}
+
+// header
+.header {
+	position: relative;
+	height: 70rem;
+	width: 100%;
+	padding: 0 7rem;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	&__content {
+		width: 100%;
+		padding-right: 7vw;
+
+		display: grid;
+		grid-row-gap: 1rem;
+		align-content: center;
+	}
+
+	&__illustration {
+		width: 100%;
+
+		display: grid;
+		align-content: center;
+
+		&--img {
+			width: 100%;
+		}
+	}
+}
+
+.form {
+	margin: 1rem 0;
+
+	& > * {
+		padding: 1rem 2rem;
+		height: 4rem;
+	}
+	&__input {
+		width: 30rem;
+		outline: none;
+		margin-right: 2rem;
+		border: 1px solid $color-dark-blue;
+	}
+
+	&__btn {
+		width: 15rem;
+		background-color: $color-bright-blue;
+		color: #fff;
+		border-radius: 3px;
+		border: 1px solid $color-bright-blue;
 	}
 }

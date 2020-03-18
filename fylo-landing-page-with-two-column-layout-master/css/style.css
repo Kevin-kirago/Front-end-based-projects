@@ -14,10 +14,20 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  line-height: 1.7; }
+  line-height: 1.5; }
+
+.heading__primary {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.5rem;
+  color: #070439; }
+
+.paragraph {
+  font-size: 1.5rem;
+  color: #070439; }
 
 .navigation {
-  position: relative;
+  position: absolute;
+  top: 0;
   height: 10rem;
   width: 100%;
   padding: 0 7rem;
@@ -51,3 +61,40 @@ body {
     .navigation__item--link:link, .navigation__item--link:visited {
       color: #070439;
       text-decoration: none; }
+
+.header {
+  position: relative;
+  height: 70rem;
+  width: 100%;
+  padding: 0 7rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .header__content {
+    width: 100%;
+    padding-right: 7vw;
+    display: grid;
+    grid-row-gap: 1rem;
+    align-content: center; }
+  .header__illustration {
+    width: 100%;
+    display: grid;
+    align-content: center; }
+    .header__illustration--img {
+      width: 100%; }
+
+.form {
+  margin: 1rem 0; }
+  .form > * {
+    padding: 1rem 2rem;
+    height: 4rem; }
+  .form__input {
+    width: 30rem;
+    outline: none;
+    margin-right: 2rem;
+    border: 1px solid #070439; }
+  .form__btn {
+    width: 15rem;
+    background-color: #3065f8;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #3065f8; }
