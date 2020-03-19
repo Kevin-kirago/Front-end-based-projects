@@ -60,19 +60,25 @@
 // header
 .header {
 	position: relative;
-	height: 70rem;
+	min-height: 70rem;
 	width: 100%;
 	padding: 0 7rem;
 
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 
+	@include respond(phone) {
+		padding: 5rem 2rem;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: 1fr;
+	}
+
 	&__content {
 		width: 100%;
-		padding-right: 7vw;
+		padding-right: 3rem;
 
 		display: grid;
-		grid-row-gap: 1rem;
+		grid-row-gap: 1.5rem;
 		align-content: center;
 	}
 
@@ -82,8 +88,12 @@
 		display: grid;
 		align-content: center;
 
-		&--img {
+		&--image {
 			width: 100%;
+		}
+
+		@include respond(phone) {
+			grid-row: 1 / 2;
 		}
 	}
 }
@@ -109,4 +119,91 @@
 		border-radius: 3px;
 		border: 1px solid $color-bright-blue;
 	}
+}
+
+.story {
+	position: relative;
+	width: 100%;
+	background-color: $color-greyish-blue;
+	padding: 10rem 7rem;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include respond(phone) {
+		padding: 0 2rem;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: 1fr;
+	}
+
+	&::before {
+		display: block;
+		content: "";
+		position: absolute;
+		background-color: #fff;
+		top: 0;
+		left: 0;
+		height: 10rem;
+		width: 100%;
+		background-image: url(../images/bg-curve-desktop.svg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	&__content {
+		width: 100%;
+		padding-right: 3rem;
+
+		display: grid;
+		grid-row-gap: 1.5rem;
+		align-content: center;
+		justify-items: start;
+	}
+
+	&__review {
+		width: 30rem;
+		background-color: #fff;
+		padding: 2rem;
+		border-radius: 4px;
+		box-shadow: 1px 0 8px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	&__profile {
+		display: flex;
+		width: 100%;
+
+		&--img {
+			width: 30%;
+		}
+	}
+
+	&__illustration {
+		width: 100%;
+
+		display: grid;
+		align-content: center;
+
+		&--image {
+			width: 100%;
+		}
+
+		@include respond(phone) {
+			grid-row: 1 / 2;
+		}
+	}
+}
+
+.cta {
+	position: relative;
+	height: 40rem;
+	width: 100%;
+	background-color: $color-desaturated-blue;
+}
+
+.footer {
+	position: relative;
+	height: 50rem;
+	width: 100%;
+	background-color: $color-dark-blue;
 }

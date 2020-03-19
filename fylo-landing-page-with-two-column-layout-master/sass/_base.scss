@@ -47,11 +47,24 @@ body {
 	&__primary {
 		font-family: $font-heading;
 		font-size: 3.5rem;
+		line-height: 1.4;
 		color: $color-dark-blue;
 	}
 }
 
 .paragraph {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
+	width: 80%;
 	color: $color-dark-blue;
+}
+
+.btn {
+	&:link,
+	&:visited {
+		color: $color-moderate-cyan;
+		font-size: 1.3rem;
+		padding: 0.5rem 0;
+		text-decoration: none;
+		border-bottom: 1px solid $color-moderate-cyan;
+	}
 }
