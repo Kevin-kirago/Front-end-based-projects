@@ -50,12 +50,24 @@ body {
 		line-height: 1.4;
 		color: $color-dark-blue;
 	}
+
+	&__secondary {
+		font-family: $font-heading;
+		font-size: 2.8rem;
+		color: #fff;
+	}
 }
 
 .paragraph {
 	font-size: 1.4rem;
 	width: 80%;
 	color: $color-dark-blue;
+
+	&--light {
+		font-size: 1.3rem;
+		width: 70%;
+		color: $color-greyish-blue;
+	}
 }
 
 .btn {

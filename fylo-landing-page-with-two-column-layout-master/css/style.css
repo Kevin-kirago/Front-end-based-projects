@@ -22,10 +22,19 @@ body {
   line-height: 1.4;
   color: #070439; }
 
+.heading__secondary {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.8rem;
+  color: #fff; }
+
 .paragraph {
   font-size: 1.4rem;
   width: 80%;
   color: #070439; }
+  .paragraph--light {
+    font-size: 1.3rem;
+    width: 70%;
+    color: #f6f6fe; }
 
 .btn:link, .btn:visited {
   color: #3c9f8f;
@@ -85,7 +94,7 @@ body {
       grid-template-columns: 1fr; } }
   .header__content {
     width: 100%;
-    padding-right: 3rem;
+    padding-right: 3.5rem;
     display: grid;
     grid-row-gap: 1.5rem;
     align-content: center; }
@@ -101,6 +110,14 @@ body {
 
 .form {
   margin: 1rem 0; }
+  .form--2 {
+    display: grid;
+    justify-items: start;
+    grid-row-gap: 1rem; }
+    .form--2 input {
+      width: 40rem !important;
+      border: none;
+      border-radius: 3px; }
   .form > * {
     padding: 1rem 2rem;
     height: 4rem; }
@@ -109,8 +126,10 @@ body {
     outline: none;
     margin-right: 2rem;
     border: 1px solid #070439; }
+    .form__input::placeholder {
+      color: #bfbfbf; }
   .form__btn {
-    width: 15rem;
+    padding: 0 4rem;
     background-color: #3065f8;
     color: #fff;
     border-radius: 3px;
@@ -191,6 +210,12 @@ body {
   background-color: #585989;
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
+  .cta__content {
+    display: grid;
+    grid-row-gap: 1rem; }
+  .cta__form {
+    display: flex;
+    justify-content: flex-end; }
 
 .footer {
   position: relative;
