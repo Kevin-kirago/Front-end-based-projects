@@ -21,6 +21,9 @@ body {
   font-size: 3.5rem;
   line-height: 1.4;
   color: #070439; }
+  @media (max-width: 37.5em) {
+    .heading__primary {
+      font-size: 2rem; } }
 
 .heading__secondary {
   font-family: "Raleway", sans-serif;
@@ -35,6 +38,10 @@ body {
     font-size: 1.3rem;
     width: 70%;
     color: #f6f6fe; }
+  @media (max-width: 37.5em) {
+    .paragraph {
+      width: 90%;
+      text-align: center; } }
 
 .btn:link, .btn:visited {
   color: #3c9f8f;
@@ -167,6 +174,10 @@ body {
     grid-row-gap: 1.5rem;
     align-content: center;
     justify-items: start; }
+    @media (max-width: 37.5em) {
+      .story__content {
+        justify-items: center;
+        padding-right: 0; } }
   .story__review {
     width: 30rem;
     background-color: #fff;
@@ -210,6 +221,11 @@ body {
   background-color: #585989;
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 37.5em) {
+    .cta {
+      padding: 10rem 2rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto); } }
   .cta__content {
     display: grid;
     grid-row-gap: 1rem; }
@@ -219,6 +235,63 @@ body {
 
 .footer {
   position: relative;
-  height: 50rem;
+  padding: 10rem 7rem;
   width: 100%;
-  background-color: #070439; }
+  background-color: #070439;
+  display: grid;
+  grid-row-gap: 3rem; }
+  .footer__logo {
+    width: 100%;
+    height: 4rem; }
+    .footer__logo--img {
+      height: 100%;
+      filter: grayscale(1) brightness(0) invert(1); }
+  .footer__content {
+    display: grid;
+    height: 10rem;
+    grid-template-columns: 2fr 1fr 1fr 2fr; }
+  .footer__details {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    grid-template-rows: repeat(2, 2rem);
+    grid-gap: 1rem; }
+    .footer__details--text {
+      color: #bfbfbf;
+      font-size: 1.3rem;
+      display: grid;
+      align-content: center; }
+    .footer__details--img {
+      display: grid;
+      align-content: center; }
+      .footer__details--img img {
+        width: 80%; }
+  .footer__nav {
+    list-style: none;
+    display: grid;
+    justify-items: center;
+    grid-gap: 1rem; }
+  .footer__item {
+    width: 20rem;
+    display: grid;
+    align-content: center;
+    font-size: 1.3rem; }
+    .footer__item--link:link, .footer__item--link:visited {
+      color: #bfbfbf;
+      text-decoration: none; }
+  .footer__links {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem; }
+    .footer__links--social {
+      height: 3.5rem;
+      width: 3.5rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: grid;
+      align-content: center;
+      justify-items: center; }
+      .footer__links--social:not(:last-child) {
+        margin-right: 2rem; }

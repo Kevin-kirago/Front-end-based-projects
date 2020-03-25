@@ -49,6 +49,10 @@ body {
 		font-size: 3.5rem;
 		line-height: 1.4;
 		color: $color-dark-blue;
+
+		@include respond(phone) {
+			font-size: 2rem;
+		}
 	}
 
 	&__secondary {
@@ -67,6 +71,11 @@ body {
 		font-size: 1.3rem;
 		width: 70%;
 		color: $color-greyish-blue;
+	}
+
+	@include respond(phone) {
+		width: 90%;
+		text-align: center;
 	}
 }
 

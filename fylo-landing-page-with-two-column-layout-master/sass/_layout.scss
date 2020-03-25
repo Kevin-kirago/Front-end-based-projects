@@ -175,6 +175,11 @@
 		grid-row-gap: 1.5rem;
 		align-content: center;
 		justify-items: start;
+
+		@include respond(phone) {
+			justify-items: center;
+			padding-right: 0;
+		}
 	}
 
 	&__review {
@@ -242,6 +247,12 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 
+	@include respond(phone) {
+		padding: 10rem 2rem;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, auto);
+	}
+
 	&__content {
 		display: grid;
 		grid-row-gap: 1rem;
@@ -255,7 +266,99 @@
 
 .footer {
 	position: relative;
-	height: 50rem;
+	padding: 10rem 7rem;
 	width: 100%;
 	background-color: $color-dark-blue;
+
+	display: grid;
+	grid-row-gap: 3rem;
+
+	&__logo {
+		width: 100%;
+		height: 4rem;
+
+		&--img {
+			height: 100%;
+			filter: grayscale(1) brightness(0) invert(1);
+		}
+	}
+
+	&__content {
+		display: grid;
+		height: 10rem;
+		grid-template-columns: 2fr 1fr 1fr 2fr;
+	}
+
+	&__details {
+		display: grid;
+		grid-template-columns: 2rem 1fr;
+		grid-template-rows: repeat(2, 2rem);
+		grid-gap: 1rem;
+
+		&--text {
+			color: $color-gray;
+			font-size: 1.3rem;
+
+			display: grid;
+			align-content: center;
+		}
+
+		&--img {
+			display: grid;
+			align-content: center;
+
+			img {
+				width: 80%;
+			}
+		}
+	}
+
+	&__nav {
+		list-style: none;
+
+		display: grid;
+		justify-items: center;
+		grid-gap: 1rem;
+		// margin-left: 3rem;
+	}
+
+	&__item {
+		width: 20rem;
+		display: grid;
+		align-content: center;
+
+		font-size: 1.3rem;
+
+		&--link {
+			&:link,
+			&:visited {
+				color: $color-gray;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: center;
+		font-size: 1.3rem;
+
+		&--social {
+			height: 3.5rem;
+			width: 3.5rem;
+			color: #fff;
+			text-decoration: none;
+			padding: 1rem;
+			border: 1px solid #fff;
+			border-radius: 50%;
+
+			display: grid;
+			align-content: center;
+			justify-items: center;
+
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+		}
+	}
 }
