@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": 0,
 		"company": "Photosnap",
 		"logo": "./images/photosnap.svg",
 		"new": true,
@@ -14,7 +14,7 @@
 		"languages": ["HTML", "CSS", "JavaScript"]
 	},
 	{
-		"id": 2,
+		"id": 1,
 		"company": "Manage",
 		"logo": "./images/manage.svg",
 		"new": true,
@@ -29,7 +29,7 @@
 		"tools": ["React"]
 	},
 	{
-		"id": 3,
+		"id": 2,
 		"company": "Account",
 		"logo": "./images/account.svg",
 		"new": true,
@@ -44,7 +44,7 @@
 		"tools": ["React", "Sass"]
 	},
 	{
-		"id": 4,
+		"id": 3,
 		"company": "MyHome",
 		"logo": "./images/myhome.svg",
 		"new": false,
@@ -58,7 +58,7 @@
 		"languages": ["CSS", "JavaScript"]
 	},
 	{
-		"id": 5,
+		"id": 4,
 		"company": "Loop Studios",
 		"logo": "./images/loop-studios.svg",
 		"new": false,
@@ -73,7 +73,7 @@
 		"tools": ["Ruby", "Sass"]
 	},
 	{
-		"id": 6,
+		"id": 5,
 		"company": "FaceIt",
 		"logo": "./images/faceit.svg",
 		"new": false,
@@ -87,7 +87,7 @@
 		"tools": ["RoR"]
 	},
 	{
-		"id": 7,
+		"id": 6,
 		"company": "Shortly",
 		"logo": "./images/shortly.svg",
 		"new": false,
@@ -102,7 +102,7 @@
 		"tools": ["Sass"]
 	},
 	{
-		"id": 8,
+		"id": 7,
 		"company": "Insure",
 		"logo": "./images/insure.svg",
 		"new": false,
@@ -117,7 +117,7 @@
 		"tools": ["Vue, Sass"]
 	},
 	{
-		"id": 9,
+		"id": 8,
 		"company": "Eyecam Co.",
 		"logo": "./images/eyecam-co.svg",
 		"new": false,
@@ -132,7 +132,7 @@
 		"tools": ["Django"]
 	},
 	{
-		"id": 10,
+		"id": 9,
 		"company": "The Air Filter Company",
 		"logo": "./images/the-air-filter-company.svg",
 		"new": false,
