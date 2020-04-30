@@ -1,0 +1,106 @@
+.navbar {
+	position: relative;
+	height: 15rem;
+	width: 100%;
+	background: url(../assets/bg-header-desktop.svg), #5ba4a4;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.main-section {
+	position: relative;
+	width: 100%;
+	min-height: 85vh;
+	background-color: #effafa;
+}
+
+.joblist {
+	&__preview {
+		display: grid;
+		justify-items: center;
+		grid-row-gap: 2rem;
+		width: 100%;
+		padding: 5rem 0;
+	}
+
+	&__item {
+		width: 80%;
+		height: 15rem;
+		border-radius: 4px;
+		background-color: #fff;
+		padding: 2rem;
+		border-left: 3px solid #fff;
+		transition: all 0.3s;
+
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		&:hover {
+			border-left: 3px solid #5ba4a4;
+		}
+
+		&--profile {
+			display: flex;
+		}
+
+		&--logo {
+			position: relative;
+			width: 13rem;
+			height: 100%;
+			margin-right: 2rem;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				object-fit: contain;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+			}
+		}
+
+		&--content {
+			position: relative;
+			display: grid;
+			height: 100%;
+			width: 100%;
+			grid-template-rows: repeat(3, 1fr);
+			align-content: center;
+		}
+
+		&--detail {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+}
+
+.filterBtn {
+	padding: 0.8rem 1rem;
+	color: #5ba4a4;
+	background-color: #eef6f6;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: all 0.3s;
+
+	&:not(:last-child) {
+		margin-right: 2rem;
+	}
+
+	&:hover {
+		color: #fff;
+		background-color: #5ba4a4;
+	}
+}
+
+.content {
+	&__position {
+		display: flex;
+		align-items: center;
+		color: #2c3a3a;
+	}
+}
