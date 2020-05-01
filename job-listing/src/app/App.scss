@@ -69,6 +69,24 @@
 			width: 100%;
 			grid-template-rows: repeat(3, 1fr);
 			align-content: center;
+
+			.new,
+			.featured {
+				display: inline-block;
+				padding: 0.5rem 1rem;
+				border-radius: 1rem;
+				font-size: 0.8rem;
+				margin-left: 1.5rem;
+				text-transform: uppercase;
+				color: #fff;
+			}
+			.new {
+				background-color: #5ba4a4;
+			}
+
+			.featured {
+				background-color: #2c3a3a;
+			}
 		}
 
 		&--detail {
@@ -98,6 +116,16 @@
 }
 
 .content {
+	&__header {
+		display: flex;
+		align-items: flex-end;
+
+		.company {
+			font-size: 1.6rem;
+			color: #5ba4a4;
+		}
+	}
+
 	&__position {
 		display: flex;
 		align-items: center;

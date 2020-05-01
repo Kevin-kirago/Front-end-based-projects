@@ -1,7 +1,8 @@
 import React from "react";
 import "../app/App.scss";
 
-const JobListItem = ({ item: { company, featured, contract, newArrival, id, position, logo, role, level, languages, location, postedAt } }) => {
+const JobListItem = ({ item }) => {
+	const { company, featured, contract, newArrival, id, position, logo, role, level, languages, location, postedAt } = item;
 	return (
 		<div className="joblist__item ">
 			<div className="joblist__item--profile">
@@ -9,7 +10,11 @@ const JobListItem = ({ item: { company, featured, contract, newArrival, id, posi
 					<img src={logo} alt={`logo-${id}`} />
 				</div>
 				<div className="joblist__item--content">
-					<div className="content__header"></div>
+					<div className="content__header">
+						<span className="company">{company}</span>
+						{newArrival ? <span className="new">new!</span> : null}
+						{featured ? <span className="featured">featured!</span> : null}
+					</div>
 					<div className="content__position">
 						<h1>{position}</h1>
 					</div>
