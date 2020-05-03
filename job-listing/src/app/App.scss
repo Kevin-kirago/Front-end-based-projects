@@ -21,23 +21,24 @@
 		justify-items: center;
 		grid-row-gap: 2rem;
 		width: 100%;
-		padding: 5rem 0;
+		padding: 7.5rem 0;
 	}
 
 	&__item {
-		width: 80%;
+		width: 85%;
 		height: 15rem;
 		border-radius: 4px;
 		background-color: #fff;
-		padding: 2rem;
-		border-left: 3px solid #fff;
+		padding: 2rem 4rem;
 		transition: all 0.3s;
+		box-shadow: 0px 1rem 2rem 0px rgba(0, 0, 0, 0.1);
 
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 
-		&:hover {
-			border-left: 3px solid #5ba4a4;
+		&:nth-child(1),
+		&:nth-child(2) {
+			border-left: 4px solid #5ba4a4;
 		}
 
 		&--profile {
@@ -64,21 +65,25 @@
 
 		&--content {
 			position: relative;
-			display: grid;
 			height: 100%;
 			width: 100%;
+			display: grid;
 			grid-template-rows: repeat(3, 1fr);
 			align-content: center;
 
 			.new,
 			.featured {
 				display: inline-block;
-				padding: 0.5rem 1rem;
-				border-radius: 1rem;
-				font-size: 0.8rem;
+				border: none;
+				padding: 7.5px 1rem;
+				border: 1px solid;
+				border-radius: 2rem;
+				font-size: 1rem;
+				font-weight: 700;
 				margin-left: 1.5rem;
 				text-transform: uppercase;
 				color: #fff;
+				line-height: 1;
 			}
 			.new {
 				background-color: #5ba4a4;
@@ -101,6 +106,8 @@
 	padding: 0.8rem 1rem;
 	color: #5ba4a4;
 	background-color: #eef6f6;
+	font-size: 1.3rem;
+	font-weight: 700;
 	cursor: pointer;
 	border-radius: 4px;
 	transition: all 0.3s;
@@ -118,10 +125,11 @@
 .content {
 	&__header {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 
 		.company {
 			font-size: 1.6rem;
+			font-weight: 700;
 			color: #5ba4a4;
 		}
 	}
@@ -129,6 +137,34 @@
 	&__position {
 		display: flex;
 		align-items: center;
-		color: #2c3a3a;
+
+		h1 {
+			color: #2c3a3a;
+			cursor: pointer;
+			transition: color 0.3s;
+
+			&:hover {
+				color: #5ba4a4;
+			}
+		}
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+
+		&--item {
+			font-size: 1.5rem;
+			color: #999;
+
+			&-border {
+				&::before {
+					display: block;
+					content: "\2022";
+					color: #999;
+					padding: 0 2rem;
+				}
+			}
+		}
 	}
 }

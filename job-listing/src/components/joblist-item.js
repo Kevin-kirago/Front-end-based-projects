@@ -2,7 +2,7 @@ import React from "react";
 import "../app/App.scss";
 
 const JobListItem = ({ item }) => {
-	const { company, featured, contract, newArrival, id, position, logo, role, level, languages, location, postedAt } = item;
+	const { company, featured, contract, newArrival, id, position, logo, role, level, languages, tools, location, postedAt } = item;
 	return (
 		<div className="joblist__item ">
 			<div className="joblist__item--profile">
@@ -18,7 +18,13 @@ const JobListItem = ({ item }) => {
 					<div className="content__position">
 						<h1>{position}</h1>
 					</div>
-					<div className="content__footer"></div>
+					<div className="content__footer">
+						<span className="content__footer--item">{postedAt}</span>
+						<span className="content__footer--item-border"></span>
+						<span className="content__footer--item">{contract}</span>
+						<span className="content__footer--item-border"></span>
+						<span className="content__footer--item">{location}</span>
+					</div>
 				</div>
 			</div>
 			<div className="joblist__item--detail">
@@ -27,6 +33,13 @@ const JobListItem = ({ item }) => {
 				{languages
 					? languages.map((item) => (
 							<div className="filterBtn" key={languages.indexOf(item)}>
+								{item}
+							</div>
+					  ))
+					: null}
+				{tools
+					? tools.map((item) => (
+							<div className="filterBtn" key={tools.indexOf(item)}>
 								{item}
 							</div>
 					  ))
