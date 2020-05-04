@@ -1,67 +1,64 @@
 import React from "react";
-import data from "../data/data.js";
+import jobsData from "../data/data.js";
 import JobListItem from "./joblist-item";
-
+import SearchBox from "./search-box";
 import "../app/App.scss";
 
 class JobListPreview extends React.Component {
 	state = {
 		searchField: [],
-		filteredData: {
-			html: [],
-			css: [],
-			javascript: [],
-			python: [],
-			frontend: [],
-			backend: [],
-			junoir: [],
-			midweight: [],
-			senior: [],
-		},
-		displayData: [],
+		data: [],
 	};
 
 	componentDidMount() {
 		const { searchField } = this.state;
 		if (searchField.length === 0) {
-			this.setState({ displayData: data }, () => this.filteredItems);
+			this.setState({ data: jobsData });
 		}
-		this.filteredItems("Frontend");
 	}
 
 	filteredItems = (itemsToFilter) => {
-		return data.map((item) => {
+		return this.state.data.filter((item) => {
 			for (const key in item) {
-				if (item[key] === itemsToFilter) {
-					console.log(item);
+				if (Array.isArray(item[key])) {
+					if (item[key].includes(itemsToFilter)) {
+						return item;
+					}
+				} else {
+					if (item[key] === itemsToFilter) {
+						return item;
+					}
 				}
 			}
 		});
-
-		// for (const key in object) {
-		// 	if (object.hasOwnProperty(key)) {
-		// 		const element = object[key];
-		// 	}
-		// }
-
-		// const rendered = data.filter((item) =>
-		// 	Object.keys(item).filter((val) => {
-		// 		if (item[val] !== itemsToFilter) {
-		// 			return item;
-		// 		}
-		// 	})
-		// );
-
-		// console.log(rendered);
 	};
 
-	onChange = () => {};
+	handleClick = (event) => {
+		const filterValue = event.target.textContent;
+		const { searchField } = this.state;
+		if (!searchField.includes(filterValue)) {
+			searchField.push(filterValue);
+			this.setState({ data: this.filteredItems(filterValue) });
+		}
+	};
+
+	removeFilterValue = (value) => {
+		const { searchField } = this.state;
+		searchField.filter((item) => item !== value);
+	};
+
+	clearFilterValue = () => {
+		const { searchField } = this.state;
+		searchField.splice(0, searchField.length);
+	};
 
 	render() {
+		const { data, searchField } = this.state;
 		return (
 			<div className="joblist__preview">
+				{searchField.length !== 0 ? <SearchBox /> : null}
 				{data.map((item) => (
-					<JobListItem key={item.id} item={item} onChange={this.onChange} />
+					<JobListItem key={item.id} item={item} handleClick={this.handleClick} />
 				))}
 			</div>
 		);

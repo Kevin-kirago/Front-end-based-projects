@@ -95,6 +95,7 @@ export default [
 		postedAt: "2w ago",
 		contract: "Full Time",
 		location: "UK Only",
+		languages: ["Ruby"],
 		tools: ["RoR"],
 	},
 	{
@@ -125,7 +126,7 @@ export default [
 		contract: "Full Time",
 		location: "USA Only",
 		languages: ["JavaScript"],
-		tools: ["Vue, Sass"],
+		tools: ["Vue", "Sass"],
 	},
 	{
 		id: 8,

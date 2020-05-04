@@ -1,10 +1,10 @@
 import React from "react";
 import "../app/App.scss";
 
-const JobListItem = ({ item }) => {
+const JobListItem = ({ item, handleClick }) => {
 	const { company, featured, contract, newArrival, id, position, logo, role, level, languages, tools, location, postedAt } = item;
 	return (
-		<div className="joblist__item ">
+		<div className={`joblist__item ${featured ? "border-left" : ""}`}>
 			<div className="joblist__item--profile">
 				<div className="joblist__item--logo">
 					<img src={logo} alt={`logo-${id}`} />
@@ -28,18 +28,22 @@ const JobListItem = ({ item }) => {
 				</div>
 			</div>
 			<div className="joblist__item--detail">
-				<div className="filterBtn">{role}</div>
-				<div className="filterBtn">{level}</div>
+				<div className="filterBtn" onClick={handleClick}>
+					{role}
+				</div>
+				<div className="filterBtn" onClick={handleClick}>
+					{level}
+				</div>
 				{languages
 					? languages.map((item) => (
-							<div className="filterBtn" key={languages.indexOf(item)}>
+							<div className="filterBtn" onClick={handleClick} key={languages.indexOf(item)}>
 								{item}
 							</div>
 					  ))
 					: null}
 				{tools
 					? tools.map((item) => (
-							<div className="filterBtn" key={tools.indexOf(item)}>
+							<div className="filterBtn" onClick={handleClick} key={tools.indexOf(item)}>
 								{item}
 							</div>
 					  ))
