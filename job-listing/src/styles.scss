@@ -1,14 +1,36 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+
+	@media only screen and (max-width: 37.5em) {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: "Spartan", sans-serif;
+	font-weight: 500;
+}
+
 .navbar {
 	position: relative;
 	height: 15rem;
 	width: 100%;
-	background: url(../assets/bg-header-desktop.svg), #5ba4a4;
+	background: url(./assets/bg-header-desktop.svg), #5ba4a4;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 
 	@media only screen and (max-width: 37.5em) {
-		background-image: url(../assets/bg-header-mobile.svg);
+		background-image: url(./assets/bg-header-mobile.svg);
 	}
 }
 
@@ -219,6 +241,38 @@
 	display: grid;
 	grid-template-columns: 1fr 10rem;
 
+	&__filter {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+
+		&--item {
+			display: grid;
+			grid-template-columns: 1fr 3rem;
+			color: #5ba4a4;
+			background-color: #eef6f6;
+			font-size: 1.3rem;
+			font-weight: 700;
+			cursor: pointer;
+			border-radius: 4px;
+			transition: all 0.3s;
+			margin-right: 2rem;
+
+			&-text {
+				padding: 0.8rem 1rem;
+			}
+
+			.icon-remove {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #5ba4a4;
+				overflow: hidden;
+			}
+		}
+	}
+
 	&__clearBtn {
 		display: flex;
 		align-items: center;
@@ -233,6 +287,10 @@
 			background-color: #fff;
 			color: #2c3a3a;
 			transition: all 0.3s;
+
+			&:focus {
+				outline: none;
+			}
 
 			&:hover {
 				color: #5ba4a4;

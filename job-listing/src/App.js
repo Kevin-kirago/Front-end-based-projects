@@ -1,7 +1,7 @@
 import React from "react";
-import "./App.scss";
+import "./styles.scss";
 
-import JobListPreview from "../components/joblist-preview";
+import JobListPreview from "./components/joblist-preview";
 
 const App = () => {
 	return (

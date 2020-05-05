@@ -1,5 +1,5 @@
 import React from "react";
-import "../app/App.scss";
+import "../styles.scss";
 
 const JobListItem = ({ item, handleClick }) => {
 	const { company, featured, contract, newArrival, id, position, logo, role, level, languages, tools, location, postedAt } = item;
