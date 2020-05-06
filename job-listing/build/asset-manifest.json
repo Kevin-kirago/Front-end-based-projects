@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.de95dea7.chunk.css",
+    "main.js": "/static/js/main.a8d77618.chunk.js",
+    "main.js.map": "/static/js/main.a8d77618.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.452955ef.js",
+    "runtime-main.js.map": "/static/js/runtime-main.452955ef.js.map",
+    "static/js/2.09e69088.chunk.js": "/static/js/2.09e69088.chunk.js",
+    "static/js/2.09e69088.chunk.js.map": "/static/js/2.09e69088.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.fabf46a500ea4602b20bbe311cf68d8a.js": "/precache-manifest.fabf46a500ea4602b20bbe311cf68d8a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.de95dea7.chunk.css.map": "/static/css/main.de95dea7.chunk.css.map",
+    "static/js/2.09e69088.chunk.js.LICENSE.txt": "/static/js/2.09e69088.chunk.js.LICENSE.txt",
+    "static/media/account.svg": "/static/media/account.9f72c13b.svg",
+    "static/media/styles.scss": "/static/media/bg-header-mobile.6b5ff5a0.svg",
+    "static/media/eyecam-co.svg": "/static/media/eyecam-co.39eaebdf.svg",
+    "static/media/faceit.svg": "/static/media/faceit.76faa79f.svg",
+    "static/media/icon-remove.svg": "/static/media/icon-remove.ae67c678.svg",
+    "static/media/insure.svg": "/static/media/insure.52b85a50.svg",
+    "static/media/loop-studios.svg": "/static/media/loop-studios.6c50fd74.svg",
+    "static/media/manage.svg": "/static/media/manage.fbe431a9.svg",
+    "static/media/myhome.svg": "/static/media/myhome.e0ad9358.svg",
+    "static/media/photosnap.svg": "/static/media/photosnap.3f34b49c.svg",
+    "static/media/shortly.svg": "/static/media/shortly.45f63772.svg",
+    "static/media/the-air-filter-company.svg": "/static/media/the-air-filter-company.23b515f9.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.452955ef.js",
+    "static/js/2.09e69088.chunk.js",
+    "static/css/main.de95dea7.chunk.css",
+    "static/js/main.a8d77618.chunk.js"
+  ]
+}

@@ -28,7 +28,6 @@ class JobListPreview extends React.Component {
 
 		const filteredItems = arrList.filter((item) => {
 			let newItems;
-
 			for (const key in item) {
 				if (Array.isArray(item[key])) {
 					if (item[key].includes(itemsToFilter)) {
@@ -63,7 +62,7 @@ class JobListPreview extends React.Component {
 				filteredData = [];
 			for (const item of filteredValue) {
 				if (filteredValue.length === 1) {
-					const filteredData = this.filteredItems(item, jobsData);
+					filteredData = this.filteredItems(item, jobsData);
 					return filteredData;
 				} else {
 					while (filteredValue.indexOf(item) === 0) {
