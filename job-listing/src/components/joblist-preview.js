@@ -19,6 +19,7 @@ class JobListPreview extends React.Component {
 
 	filteredItems = (itemsToFilter, arr) => {
 		let arrList = [];
+
 		if (!arr) {
 			arrList = this.state.data;
 		} else {
@@ -26,17 +27,20 @@ class JobListPreview extends React.Component {
 		}
 
 		const filteredItems = arrList.filter((item) => {
+			let newItems;
+
 			for (const key in item) {
 				if (Array.isArray(item[key])) {
 					if (item[key].includes(itemsToFilter)) {
-						return item;
+						newItems = item;
 					}
 				} else {
 					if (item[key] === itemsToFilter) {
-						return item;
+						newItems = item;
 					}
 				}
 			}
+			return newItems;
 		});
 
 		return filteredItems;
@@ -51,29 +55,35 @@ class JobListPreview extends React.Component {
 		}
 	};
 
-	findFlitereData = (filteredValue) => {
+	findFiltereData = (filteredValue) => {
 		if (filteredValue.length === 0) {
 			return jobsData;
 		} else {
-			if (filteredValue.length === 1) {
-				for (let i = 0; i < filteredValue.length; i++) {
-					const filteredData = this.filteredItems(i, jobsData);
-					console.log(filteredData);
+			let previousData,
+				filteredData = [];
+			for (const item of filteredValue) {
+				if (filteredValue.length === 1) {
+					const filteredData = this.filteredItems(item, jobsData);
 					return filteredData;
+				} else {
+					while (filteredValue.indexOf(item) === 0) {
+						previousData = this.filteredItems(item, jobsData);
+						break;
+					}
+					filteredData = this.filteredItems(item, previousData);
 				}
 			}
+
+			return filteredData;
 		}
 	};
 
 	removeFilterValue = async (val) => {
 		const filteredValue = this.state.searchField.filter((valItem) => valItem !== val);
-		this.setState(
-			{
-				searchField: filteredValue,
-				data: this.findFlitereData(filteredValue),
-			},
-			() => console.log(this.state)
-		);
+		this.setState({
+			searchField: filteredValue,
+			data: this.findFiltereData(filteredValue),
+		});
 	};
 
 	clearFilterValue = () => {

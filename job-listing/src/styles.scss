@@ -51,13 +51,14 @@ body {
 
 		@media only screen and (max-width: 37.5em) {
 			grid-row-gap: 8rem;
+			padding-top: 15rem;
 		}
 	}
 
 	&__item {
 		position: relative;
 		width: 85%;
-		min-height: 17rem;
+		height: 17rem;
 		border-radius: 4px;
 		background-color: #fff;
 		padding: 2rem 4rem;
@@ -69,9 +70,10 @@ body {
 
 		@media only screen and (max-width: 37.5em) {
 			width: 90%;
+			height: 24rem;
 			padding: 4rem 3rem;
 			grid-template-columns: 1fr;
-			grid-template-rows: repeat(2, 12rem);
+			grid-template-rows: repeat(2, 1fr);
 		}
 
 		&--profile {
@@ -82,7 +84,7 @@ body {
 		&--logo {
 			position: relative;
 			width: 13rem;
-			height: 100%;
+			height: auto;
 			margin-right: 2rem;
 
 			display: flex;
@@ -239,7 +241,12 @@ body {
 
 	padding: 1rem 4rem;
 	display: grid;
-	grid-template-columns: 1fr 10rem;
+	grid-template-columns: 1fr 1rem;
+
+	@media only screen and (max-width: 37.5em) {
+		top: -7rem;
+		height: 12rem;
+	}
 
 	&__filter {
 		display: flex;
