@@ -1,0 +1,12 @@
+{
+	"presets": [
+		[
+			"env",
+			{
+				"targets": {
+					"browser": ["latest 5 version", "ie >= 8"]
+				}
+			}
+		]
+	]
+}

@@ -1,0 +1,72 @@
+:root {
+	// Primary
+	--scissors-gradient: linear-gradient(#ec9e0e, rgb(236, 169, 34));
+	--paper-gradient: linear-gradient(#4865f4, #5671f5);
+	--rock-gradient: linear-gradient(#dc2e4e, #dd405d);
+	--lizard-gradient: linear-gradient(#834fe3, #8c5de5);
+	--cyan: linear-gradient(#40b9ce, #52bed1);
+
+	// Neutral
+	--dark-text: #3b4363;
+	--score-text: #2a46c0;
+	--header-outline: #606e85;
+
+	--background: radial-gradient(circle, #1f3756, #141539);
+}
+
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) {
+			//600px / 16px
+			@content;
+		}
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) {
+			// 900px / 16px
+			@content;
+		}
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) {
+			// 1200px / 16px
+			@content;
+		}
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) {
+			// 1800px / 16px
+			@content;
+		}
+	}
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+
+	@include respond(phone) {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: "Barlow Semi Condensed", sans-serif;
+	line-height: 1.6;
+}
