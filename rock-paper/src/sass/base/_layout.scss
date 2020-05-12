@@ -1,6 +1,77 @@
 .container {
 	position: relative;
 	width: 100%;
-	min-height: 750vh;
+	min-height: 100vh;
 	background: var(--background);
+	padding: 5rem;
+}
+
+.header {
+	position: relative;
+	width: 60%;
+	height: 15rem;
+	border-radius: 1.5rem;
+	border: 2px solid var(--header-outline);
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 3rem;
+	text-transform: uppercase;
+
+	@include respond(tab-port) {
+		width: 90%;
+		height: 12rem;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		color: #fff;
+
+		h1 {
+			font-size: 4rem;
+
+			@include respond(tab-port) {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	&__score {
+		position: relative;
+		height: 100%;
+		width: 15rem;
+		background-color: #fff;
+		border-radius: 1.5rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@include respond(tab-port) {
+			width: 10rem;
+		}
+
+		&--title {
+			font-size: 1.5rem;
+			color: var(--score-text);
+
+			@include respond(tab-port) {
+				font-size: 1.2rem;
+			}
+		}
+
+		&--count {
+			font-size: 6.5rem;
+			color: var(--dark-text);
+
+			@include respond(tab-port) {
+				font-size: 4rem;
+			}
+		}
+	}
 }
