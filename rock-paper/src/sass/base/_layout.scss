@@ -20,6 +20,10 @@
 	padding: 2rem 3rem;
 	text-transform: uppercase;
 
+	@include respond(tab-land) {
+		width: 80%;
+	}
+
 	@include respond(tab-port) {
 		width: 90%;
 		height: 12rem;
@@ -74,4 +78,9 @@
 			}
 		}
 	}
+}
+
+.content {
+	position: relative;
+	width: 60%;
 }
