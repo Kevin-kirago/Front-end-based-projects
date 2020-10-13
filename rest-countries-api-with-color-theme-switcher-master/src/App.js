@@ -1,7 +1,12 @@
 import React from "react";
+import Navigation from "./components/navigation.component";
 
 const App = () => {
-	return <div className="App"></div>;
+	return (
+		<>
+			<Navigation />
+		</>
+	);
 };
 
 export default App;
