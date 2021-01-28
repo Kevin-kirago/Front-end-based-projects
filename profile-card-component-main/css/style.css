@@ -21,3 +21,30 @@ body {
 	font-family: "Kumbh Sans", sans-serif;
 	background-color: var(--dark-cyan);
 }
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url(../images/bg-pattern-top.svg) left top 50%, url(../images/bg-pattern-bottom.svg) right bottom 50%;
+	background-repeat: no-repeat;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	position: relative;
+	background-color: #fff;
+	height: 50vh;
+	width: 35rem;
+	border-radius: 1rem;
+
+	display: grid;
+	grid-template-rows: 1.5fr 1.5fr 1fr;
+}
+
+.card > * {
+	border: 1px solid var(--dark-cyan);
+}
