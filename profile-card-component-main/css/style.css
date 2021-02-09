@@ -26,8 +26,9 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background: url(../images/bg-pattern-top.svg) left top 50%, url(../images/bg-pattern-bottom.svg) right bottom 50%;
+	background: url(../images/bg-pattern-top.svg) left -10% top -30vh, url(../images/bg-pattern-bottom.svg) right -15% bottom -30vh;
 	background-repeat: no-repeat;
+	background-size: 50%, 50%;
 
 	display: flex;
 	align-items: center;
@@ -47,4 +48,8 @@ body {
 
 .card > * {
 	border: 1px solid var(--dark-cyan);
+}
+
+.card__coloredBgSection {
+	background: url(../images/bg-pattern-card.svg);
 }
