@@ -44,12 +44,59 @@ body {
 
 	display: grid;
 	grid-template-rows: 1.5fr 1.5fr 1fr;
-}
-
-.card > * {
-	border: 1px solid var(--dark-cyan);
+	overflow: hidden;
 }
 
 .card__coloredBgSection {
+	position: relative;
 	background: url(../images/bg-pattern-card.svg);
+}
+
+.card__coloredBgSection img {
+	position: absolute;
+	bottom: -50%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	border-radius: 50%;
+	border: 0.5rem solid #fff;
+}
+
+.card__profileSection {
+	display: grid;
+	align-content: center;
+	justify-items: center;
+	grid-row-gap: 1rem;
+}
+
+.card__reviewSection {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	border-top: 1px solid #ccc;
+}
+
+.card__review {
+	display: grid;
+	justify-items: center;
+	grid-row-gap: 1rem;
+}
+
+/* TYPOGRAPHY */
+.text__primary {
+	font-size: 1.7rem;
+	font-weight: 700;
+}
+
+p {
+	display: inline-block;
+	font-size: 1.7rem;
+	color: var(--dark-gray);
+	font-weight: 400;
+}
+
+.text__secondary {
+	font-size: 1rem;
+	color: var(--dark-gray);
+	letter-spacing: 0.12rem;
 }
