@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 70.3%; // 18px
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Josefin Sans", sans-serif;
+}
