@@ -10,3 +10,41 @@ html {
 
 body {
   font-family: "Josefin Sans", sans-serif; }
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%; }
+  .container__state--light {
+    background-color: #fafafa; }
+  .container__state--dark {
+    background-color: #161722; }
+  .container .header {
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .container .header__content {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      top: 40%;
+      left: 50%;
+      width: 50rem;
+      height: auto;
+      transform: translate(-50%, -50%); }
+      .container .header__content-title {
+        text-transform: uppercase;
+        letter-spacing: 0.9rem;
+        font-size: 4rem;
+        font-weight: 700;
+        color: #fff; }
+      .container .header__content .mode__img {
+        cursor: pointer; }
+    .container .header__state--light {
+      background-image: url(../images/bg-desktop-light.jpg); }
+    .container .header__state--dark {
+      background-image: url(../images/bg-desktop-dark.jpg); }
