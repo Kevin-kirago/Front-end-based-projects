@@ -64,6 +64,7 @@ body {
 
 .header__navList li a {
 	text-decoration: none;
+	font-weight: 700;
 }
 
 .header__navLink {
@@ -85,6 +86,7 @@ body {
 	border-radius: 10rem;
 	text-decoration: none;
 	font-size: 1.7rem;
+	font-weight: 700;
 }
 
 /* ****TYPOGRAPHY**** */
@@ -96,7 +98,7 @@ body {
 }
 
 .paragraph {
-	font-size: 2rem;
+	font-size: 2.7rem;
 	color: var(--grayish-violet);
 }
 
@@ -106,6 +108,7 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 	margin: 10rem 0;
 	padding: 0 15rem;
+	overflow-x: hidden;
 }
 
 .content__story {
@@ -115,5 +118,10 @@ body {
 }
 
 .content__story .btn__primary {
-	margin-top: 2rem;
+	margin-top: 3rem;
+}
+
+.content__img img {
+	transform: translateX(15rem);
+	width: 50vw;
 }
