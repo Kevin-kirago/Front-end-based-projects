@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "Rock paper scissor frontend challenge",
 	"main": "index.js",
-	"dependencies": {},
 	"devDependencies": {
 		"babel-core": "^6.26.3",
 		"babel-loader": "^7.1.5",

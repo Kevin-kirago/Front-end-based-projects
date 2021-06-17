@@ -1,0 +1,162 @@
+:root {
+	--strong-cyan: #26baa4;
+	--light-blue: #6173ff;
+	--dark-grayish-blue: #4c545d;
+	--grayish-blue: #9fabb2;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 112.5% /* 18px */;
+}
+
+body {
+	font-family: "Bai Jamjuree", sans-serif;
+	line-height: 1.7rem;
+}
+
+/* ***** TYPOGAPHY ***** */
+.h1 {
+	font-size: 2.3rem;
+}
+
+.h2 {
+	font-size: 1.8rem;
+}
+
+.h3 {
+	font-size: 1.3rem;
+	text-align: start;
+}
+
+.h1,
+.h2,
+.h3 {
+	color: var(--dark-grayish-blue);
+}
+
+.p1 {
+	font-size: 1rem;
+}
+
+.p2 {
+	font-size: 0.9rem;
+}
+
+.p3 {
+	font-size: 0.8rem;
+	color: var(--grayish-blue);
+	width: 60%;
+}
+
+.p1,
+.p2 {
+	color: var(--grayish-blue);
+	text-align: center;
+	width: 50vw;
+}
+
+.btn:link,
+.btn:visited {
+	color: #fff;
+	text-decoration: none;
+	border-radius: 10rem;
+	padding: 0.5rem 2rem;
+	font-size: 0.9rem;
+}
+
+.btn--green {
+	background-color: var(--strong-cyan);
+	box-shadow: inset 0px -0.1rem 3px 0rem #0000004d;
+}
+
+.btn--blue {
+	background-color: var(--light-blue);
+	box-shadow: inset 0px -0.1rem 3px 0rem #0000004d;
+}
+
+.header {
+	position: relative;
+	min-height: 30rem;
+	background: url(../images/bg-header-desktop.png) no-repeat;
+	background-size: contain;
+	padding: 7rem 0;
+}
+
+.header__logo {
+	display: flex;
+	margin-bottom: 3rem;
+	justify-content: center;
+}
+
+.cta__content {
+	display: grid;
+	justify-items: center;
+	grid-row-gap: 1.5rem;
+}
+
+.cta__btn {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 2rem;
+	margin-top: 1rem;
+}
+
+.main {
+	position: relative;
+	display: grid;
+	grid-row-gap: 7rem;
+}
+
+.intro {
+	display: grid;
+	grid-row-gap: 1.5rem;
+	justify-items: center;
+}
+
+.features {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.features__img {
+	position: relative;
+	display: inline-block;
+}
+
+.features__img img {
+	width: 55vw;
+	transform: translateX(-5vw);
+}
+
+.features__content {
+	display: grid;
+	grid-row-gap: 1.5rem;
+	justify-items: start;
+	align-content: center;
+}
+
+.features__content .content {
+	display: grid;
+	grid-row-gap: 1rem;
+}
+
+.story {
+	display: grid;
+	grid-row-gap: 2rem;
+	justify-items: center;
+}
+
+.footer {
+	margin-top: 7rem;
+	padding: 5rem 0;
+	background-color: #ccc;
+}
