@@ -135,7 +135,8 @@ body {
 
 .features__img {
 	position: relative;
-	display: inline-block;
+	display: flex;
+	align-items: center;
 }
 
 .features__img img {
@@ -244,12 +245,11 @@ body {
 	align-items: center;
 }
 
-.footer__socials .footer__link {
+.footer__socials .footer__link:not(:first-child) {
 	margin-left: 1rem;
 }
 
 .footer__icon {
-	display: grid;
 	height: 1.7rem;
 	width: 1.7rem;
 	fill: #4c545c;
