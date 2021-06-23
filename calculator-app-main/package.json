@@ -1,0 +1,14 @@
+{
+  "name": "calculator-app-main",
+  "version": "1.0.0",
+  "description": "Calculator-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Kiargu",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
