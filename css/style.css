@@ -1,0 +1,42 @@
+:root {
+    /* Primary */
+    --soft-blue: #8bacda;
+    --cyan: #00fff7;
+
+    /* Neutral */
+    --main-bg: #0d192b;
+    --card-bg: #14253d;
+    --line: #2f415b;
+    --white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 112.5%; /* 18px -> 1rem */
+}
+body {
+    font-family: "Outfit", sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg);
+}
+
+.preview-card {
+    width: 25rem;
+    height: 70vh;
+    background-color: var(--card-bg);
+    border-radius: 0.4rem;
+}
